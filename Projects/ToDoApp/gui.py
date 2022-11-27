@@ -9,7 +9,8 @@ FONT_TYPE_SIZE = ("Helvetica", 20)
 clock_label = sg.Text("", key="clock")
 label = sg.Text("Type in a to-do")
 input_box = sg.InputText(tooltip="Enter to do", key="todo")
-add_button = sg.Button("Add")
+add_button = sg.Button(size=2, image_source="add_button.png", key="Add", tooltip="Add new todo")
+
 list_todos = sg.Listbox(values=functions.get_todos(),
                         key="todos",
                         enable_events=True,
